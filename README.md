@@ -1,5 +1,5 @@
 # browser-logs
 
-This is a dokku-ready-to-deploy app. 
+This is a ready-to-deploy dokku app. 
 
 For detect user's Browser/OS/Device.
