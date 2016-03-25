@@ -1,7 +1,5 @@
-<?php
-	
-#	require 'vendor/autoload.php';
-#	$result = new WhichBrowser\Parser(getallheaders());
-#	echo $result;
-echo "Hello world";
+<?php	
+	require 'vendor/autoload.php';
+	$result = new WhichBrowser\Parser($_SERVER['HTTP_USER_AGENT']);
+	print_r($result);
 ?>
