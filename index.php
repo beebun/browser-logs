@@ -5,3 +5,5 @@
 	print_r($result);
 	echo "</pre>";
 ?>
+
+You are using: <?php echo $result->toString(); ?><br/>
