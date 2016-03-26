@@ -1,6 +1,10 @@
 <?php
 require 'vendor/autoload.php';
 $result = new WhichBrowser\Parser($_SERVER['HTTP_USER_AGENT']);
+$model = $result->device->getManufacturer().'/'.$result->device->getModel();
+if($model == '/'){
+	$model = '-';
+}
 ?>
 
 <script src="js/jquery-2.2.1.min.js"></script>
@@ -30,11 +34,10 @@ $result = new WhichBrowser\Parser($_SERVER['HTTP_USER_AGENT']);
 				'Time': ft, 
 				'Browser': '<?php echo $result->browser->toString(); ?>',
 				'Device': '<?php echo $result->getType(); ?>',
-				'Model': '<?php echo $result->getManufacturer().'/'.$result->getModel(); ?>',
+				'Model': '<?php echo $model ?>',
 				'OS': '<?php echo $result->os->toString(); ?>'
 			},
 			success: function(result){
-				console.log(result);
 			}
 		});
 	}
