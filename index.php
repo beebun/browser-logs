@@ -30,6 +30,7 @@ $result = new WhichBrowser\Parser($_SERVER['HTTP_USER_AGENT']);
 				'Time': ft, 
 				'Browser': '<?php echo $result->browser->toString(); ?>',
 				'Device': '<?php echo $result->getType(); ?>',
+				'Model': '<?php echo $result->getManufacturer().'/'.$result->getModel(); ?>',
 				'OS': '<?php echo $result->os->toString(); ?>'
 			},
 			success: function(result){
