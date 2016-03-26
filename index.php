@@ -8,7 +8,6 @@ if($model == '/'){
 ?>
 
 <script src="js/jquery-2.2.1.min.js"></script>
-<script src="js/google-spreadsheet.js"></script>
 <script>
 
 	function save_data_to_sheet(){
